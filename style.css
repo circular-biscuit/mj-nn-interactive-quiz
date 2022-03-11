@@ -19,7 +19,7 @@
     --element-background-1: #6abfc3;
     --element-background-2: #cc9543;
     /* html background color */
-    background-color: var(--dark-background-1);
+    /* background-color: var(--dark-background-1); */
     
 }
 
