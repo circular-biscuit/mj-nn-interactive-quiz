@@ -16,9 +16,18 @@ form.addEventListener('submit', e => {
             score += 25;
         }
     })
-    //scroll to top of page and output score
-    scrollTo(0,0);
-    console.log(score);
-    resultSpan.textContent = `${score}%`;
+    //show result container on page
     resultHolder.classList.remove('d-none');
+
+    //scroll to top of page
+    scrollTo(0,0);
+    //animate score display
+    let counter = 0;
+    const output = setInterval(() => {
+        resultSpan.textContent = `${counter}%`;
+        if (counter === score){
+            clearInterval(output);
+        }
+        counter++;
+    }, 10);
 });
