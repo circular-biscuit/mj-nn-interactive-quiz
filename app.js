@@ -1,6 +1,8 @@
 //array of correct answers
 const correctAnswers = ['B','B','B','B'];
 const form = document.querySelector('.quiz-form');
+const resultHolder = document.querySelector('.result');
+const resultSpan = document.querySelector('.result span');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -14,4 +16,7 @@ form.addEventListener('submit', e => {
             score += 25;
         }
     })
-})
+    console.log(score);
+    resultSpan.textContent = `${score}%`;
+    resultHolder.classList.remove('d-none');
+});
