@@ -16,6 +16,8 @@ form.addEventListener('submit', e => {
             score += 25;
         }
     })
+    //scroll to top of page and output score
+    scrollTo(0,0);
     console.log(score);
     resultSpan.textContent = `${score}%`;
     resultHolder.classList.remove('d-none');
